@@ -19,3 +19,57 @@ Using the dot notation, assign a convertible property to the favCar object and g
 
 Use the console to log the entire favCar object.*/
 
+
+//Create empty array literal
+var clothes = []; 
+
+
+
+//Add 5 peices of clothing using push() method
+var items = clothes.push("shirt","skirt", "dress", "leggings","hat");
+
+//print the array
+for(var i = 0; i<clothes.length ; i++){
+    console.log(clothes[i]);
+}
+
+
+
+console.log("\n");
+
+
+
+//remove fifth peice of clothing
+console.log("5th item (removed):",clothes.pop(4),"\n");
+
+//Add new peice of clothing
+
+clothes.push("pants");
+
+//print the array
+for(var i = 0; i<clothes.length ; i++){
+    console.log(clothes[i]);
+}
+
+
+console.log("\n");
+
+
+
+//show 3rd item of the array
+console.log("3rd item of the array is:",clothes[2],"\n");
+
+//empty object literal
+var favCar = {}
+
+//use dot notation to add color property
+favCar.color = "red";
+
+
+//boolean convertible property
+favCar.convertible = false;
+
+console.log(favCar);
+
+
+
