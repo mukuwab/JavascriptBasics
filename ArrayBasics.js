@@ -1,5 +1,5 @@
 var fruit = [
-
+    
     "apple",
     "strawberry",
     "cherry"
@@ -8,9 +8,6 @@ var fruit = [
 
 //printing the array
 console.log(fruit);
-
-
-
 
 console.log("\n");
 
