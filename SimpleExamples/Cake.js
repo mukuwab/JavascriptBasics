@@ -2,7 +2,7 @@
 
     class Cake {
         constructor(lyr) {
-            //lyr is a parameter
+            //lyr is a parameter, local imput to the constructor
             this.layers = lyr + 1;
             //layers is a PROPERTY being defined using the lyr parameter (plus 1)
 
