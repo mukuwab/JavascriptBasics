@@ -13,35 +13,39 @@ const tax = 1.20;
 function getPrices(taxBoolean) {
     // WRITE YOUR CODE HERE
     
-    if (taxBoolean === true) {
+    /*if (taxBoolean === true) {
         console.log("Prices with 20% tax:");
     }
     else if (taxBoolean === false) {
         console.log("Prices without tax:");
     }
     else{
-    console.log("You need to pass a boolean to the getPrices call!");
-    return;
+    */
     
+    if (typeof taxBoolean !== "boolean") {
+            console.log("You need to pass a boolean to the getPrices call!");
+    return;
     }
+
+    
     
     
     for (let item of dishData) {
         let finalPrice;
             
-        if (taxBoolean === true) {
+        if (taxBoolean) {
             finalPrice = item.price * tax;
-            console.log(`Dish: ${item.name} Price: $ ${finalPrice}`);
+            console.log(`Dish: ${item.name} Price: $${finalPrice}`);
         }
-        else if (taxBoolean == false) {
+     /*   else if (taxBoolean == false) {
             finalPrice = item.price;
             console.log(`Dish: ${item.name} Price (excl.tax): $ ${finalPrice}`);
-        }
+        } */
         else {
-            console.log("You need to pass a boolean to the getPrices call!");
+            finalPrice = item.price;
+            console.log(`Dish: ${item.name} Price: $${finalPrice}`);
         }
     }
-    console.log();
 }
 
 // Task 2: Implement getDiscount()
@@ -50,7 +54,7 @@ function getDiscount(taxBoolean, guests) {
     getPrices(taxBoolean);
 
     var condition1 = typeof (guests) === 'number';
-    var condition2 = guests > 0 && guests < 30;
+    var condition2 = guests >= 2 && guests < 30;
 
     if (condition1 && condition2) {
         var discount = 0;
@@ -61,7 +65,7 @@ function getDiscount(taxBoolean, guests) {
             discount = 10;
         }
 
-        //console.log('Discount is: $'+discount)
+        console.log(`Discount is: $${discount}`)
     }
 
     else {
